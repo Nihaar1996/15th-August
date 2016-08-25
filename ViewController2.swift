@@ -13,7 +13,7 @@ class ViewController2: UIViewController, CLLocationManagerDelegate
 
 
 
-{
+{//each outlet is connected to a text box on the screen
     
     @IBOutlet var locality: UILabel?
     @IBOutlet var postalCode: UILabel?
