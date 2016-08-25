@@ -5,6 +5,7 @@
 //  Created by Apple on 15/08/15.
 //  Copyright (c) 2015 nihaar. All rights reserved.
 //  Edit: Will take this further now 08/24/16
+// Edit: This will be the new branch called messaging
 
 
 import UIKit
