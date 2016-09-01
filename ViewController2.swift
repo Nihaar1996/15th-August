@@ -45,7 +45,9 @@ class ViewController2: UIViewController, CLLocationManagerDelegate
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+  
     
+    //
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         
@@ -59,7 +61,8 @@ class ViewController2: UIViewController, CLLocationManagerDelegate
             
             if placemarks!.count > 0
             {
-                let pm = placemarks![0] 
+                let pm = placemarks![0]
+                
                 self.displayLocationInfo(pm)
             }
             else
@@ -67,8 +70,12 @@ class ViewController2: UIViewController, CLLocationManagerDelegate
                 print("Error with the data.")
             }
         })
+        
+//        CLLocation.distanceFromLocation(CLLocation);.
+        
+        
     }
-   
+
     
     func displayLocationInfo(placemark: CLPlacemark)
     {
@@ -86,6 +93,15 @@ class ViewController2: UIViewController, CLLocationManagerDelegate
         
         longitude?.text = "\(currentLocation.coordinate.longitude)"
         
+    }
+    
+    
+    func checkiflocationchanges(manager: CLLocationManager, didUpdateLocations locations: [CLLocation], placemark: CLPlacemark)
+    {
+        let distance =  currentLocation.distanceFromLocation(currentLocation);
+        if(distance>10.0){
+        self.performSegueWithIdentifier("s1", sender: self) //transitions from one screen to the next upon fulfilling the threshold value
+        }
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
