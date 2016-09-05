@@ -223,6 +223,7 @@
                                 <state key="normal" title="send sms"/>
                                 <connections>
                                     <action selector="sendTextMessageButtonTapped:" destination="gYD-9l-wyu" eventType="touchUpInside" id="gte-gp-AzT"/>
+                                    <action selector="sendTextMessageButtonTapped:placemark:" destination="gYD-9l-wyu" eventType="touchUpInside" id="HDa-Fr-drY"/>
                                 </connections>
                             </button>
                         </subviews>
