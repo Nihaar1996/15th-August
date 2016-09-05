@@ -97,7 +97,15 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTC-VE-rRn">
                                 <rect key="frame" x="156" y="187" width="55" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Car Trip"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bC-7U-7Ak">
+                                <rect key="frame" x="272" y="187" width="37" height="30"/>
+                                <state key="normal" title="S.O.S"/>
+                                <connections>
+                                    <action selector="doSomething:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kAy-7n-cDx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -117,11 +125,30 @@
                         <outlet property="maxAccY" destination="clV-0e-m1I" id="Ddm-hd-cx8"/>
                         <outlet property="maxAccZ" destination="Itf-j7-W3U" id="bx8-TM-raU"/>
                         <segue destination="gYD-9l-wyu" kind="show" identifier="s1" id="9AR-mV-JS6"/>
+                        <segue destination="3ye-xi-biy" kind="show" identifier="s2" id="xjQ-cO-mNa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="254" y="341"/>
+        </scene>
+        <!--View Controller3-->
+        <scene sceneID="x58-7m-00A">
+            <objects>
+                <viewController id="3ye-xi-biy" customClass="ViewController3" customModule="_5th_August" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PaV-k5-Bwn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Js3-UA-h1a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eIb-wV-aGX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8U-TS-XAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="626" y="1035"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="3Su-k7-6sR">
@@ -181,7 +208,6 @@
                         <outlet property="locality" destination="rUo-U2-Ixv" id="gGM-bd-MPk"/>
                         <outlet property="longitude" destination="jWh-g5-GSP" id="mfJ-Nh-gHV"/>
                         <outlet property="postalCode" destination="65v-Vd-Tom" id="3ro-TL-n1L"/>
-                        <segue destination="vXZ-lx-hvc" kind="show" identifier="s2" id="HtQ-jm-RAe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fM3-2V-NS5" userLabel="First Responder" sceneMemberID="firstResponder"/>

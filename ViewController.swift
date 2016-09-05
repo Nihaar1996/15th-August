@@ -45,6 +45,10 @@ class ViewController: UIViewController {
     @IBOutlet var MaxRotZ: UILabel?
     @IBOutlet var Alert: UILabel?
     
+    @IBAction func doSomething(sender: UIButton)
+    {
+        self.performSegueWithIdentifier("s2", sender: self); //transitions from one screen to the next upon button pressing
+    }
     
     
     //Functions
