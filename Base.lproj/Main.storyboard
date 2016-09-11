@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bC-7U-7Ak">
-                                <rect key="frame" x="43" y="171" width="37" height="30"/>
+                                <rect key="frame" x="36" y="72" width="37" height="30"/>
                                 <state key="normal" title="S.O.S"/>
                                 <connections>
                                     <action selector="doSomethingmoredifferent:" destination="pA6-z8-CsS" eventType="touchUpInside" id="6a1-RZ-SGu"/>
@@ -27,32 +27,18 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tesla-Model-S-1" translatesAutoresizingMaskIntoConstraints="NO" id="agK-h4-yvR">
-                                <rect key="frame" x="207" y="191" width="101" height="114"/>
+                                <rect key="frame" x="207" y="90" width="101" height="114"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6CP-zm-I2X">
-                                <rect key="frame" x="48" y="421" width="228" height="30"/>
+                                <rect key="frame" x="48" y="240" width="228" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="pA6-z8-CsS" id="9al-i8-3VP"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7xd-Ph-eAb">
-                                <rect key="frame" x="48" y="500" width="228" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Name of emergency contact:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vYG-DR-4Hs">
-                                <rect key="frame" x="43" y="379" width="226" height="29"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Mobile number:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FQb-MB-hX1">
-                                <rect key="frame" x="43" y="459" width="289" height="33"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTC-VE-rRn">
-                                <rect key="frame" x="207" y="171" width="55" height="30"/>
+                                <rect key="frame" x="207" y="76" width="55" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Car Trip"/>
                                 <connections>
@@ -60,30 +46,42 @@
                                     <segue destination="vXZ-lx-hvc" kind="modal" identifier="home-cartrip" id="A8g-rR-724"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="ynn-oS-4fc">
-                                <rect key="frame" x="85" y="72" width="143" height="30"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Must app">
-                                        <attributes>
-                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="17" name="Chalkboard-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SOS" translatesAutoresizingMaskIntoConstraints="NO" id="RLc-Bj-hXM">
-                                <rect key="frame" x="36" y="215" width="116" height="66"/>
+                                <rect key="frame" x="36" y="114" width="116" height="66"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Must app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnR-bX-uC7">
+                                <rect key="frame" x="102" y="28" width="87" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of emergency contact:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4f-Oi-euk">
+                                <rect key="frame" x="48" y="203" width="223" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mobile number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWe-Nj-QQZ">
+                                <rect key="frame" x="48" y="284" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bGE-ac-rjw">
+                                <rect key="frame" x="48" y="323" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZRU-zq-FD4" id="Jtt-m2-HsI"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="bJd-aU-2WL"/>
                     <connections>
                         <outlet property="NameofContact" destination="6CP-zm-I2X" id="V2L-IL-JbI"/>
-                        <outlet property="cont" destination="vYG-DR-4Hs" id="7hq-s3-7Po"/>
-                        <outletCollection property="num" destination="7xd-Ph-eAb" collectionClass="NSMutableArray" id="bSg-Fs-7Je"/>
+                        <outlet property="contactno" destination="bGE-ac-rjw" id="LV9-VA-Cip"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLF-m5-hCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -326,7 +324,7 @@
         <image name="Tesla-Model-S-1" width="728" height="437"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WtD-pA-IrB"/>
-        <segue reference="9AR-mV-JS6"/>
+        <segue reference="A8g-rR-724"/>
+        <segue reference="iDO-kJ-8zO"/>
     </inferredMetricsTieBreakers>
 </document>
